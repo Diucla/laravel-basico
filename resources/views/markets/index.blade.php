@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Basic Laravel</title>
-</head>
-<body>
-
+@extends('layouts.app')
+@section('main')
 
 	<ul>
 		@foreach($markets as $market)
@@ -14,11 +8,10 @@
 			<a href=" {{ route('markets.show', $market) }} ">
 				{{ $market->name }}
 			</a>
-		</li>
+		</li>	
 
 		@endforeach
 
 	</ul>
 	
-</body>
-</html>
+@endsection
