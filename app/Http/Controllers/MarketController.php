@@ -38,9 +38,9 @@ class MarketController extends Controller
     {
 
         $this->validate($request, [
-            'name' => 'required|unique:markets|max:255',
-            'website' => 'required',
-            'city' => 'required',
+            'name' => 'bail|required|unique:markets|max:255',
+            'website' => 'bail|required',
+            'city' => 'bail|required',
         ]);
         
 
