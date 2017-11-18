@@ -14,7 +14,8 @@ class MarketController extends Controller
      */
     public function index()
     {
-        //
+        $markets = Market::all();
+        return view('markets.index', ['markets' => $markets ]);
     }
 
     /**
