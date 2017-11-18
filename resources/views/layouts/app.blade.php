@@ -3,14 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Basic Laravel</title>
+	<link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
 </head>
 <body>
 
 	@if(count($errors) > 0)
-	
+
 	<ul>
 		@foreach ($errors->all() as $error)
-		<li>{{ $error }}</li>
+		<li class="laranja-text">{{ $error }}</li>
 		@endforeach
 	</ul>
 
