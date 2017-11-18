@@ -13,5 +13,15 @@
 		@endforeach
 
 	</ul>
+
+	<hr>
+
+	{{ $markets->links() }}
+
+	<hr>
+
+	<div style="display: inline;" >
+		<a href=" {{ route('markets.create') }} "> Novo</a>
+	</div>
 	
 @endsection
