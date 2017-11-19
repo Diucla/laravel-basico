@@ -19,5 +19,7 @@ Route::get('/', 'MarketController@index');
 
 Route::resource('markets', 'MarketController');
 
+Route::resource('farms', 'FarmController');
+
 Route::get('/teste/{market}', 'MarketController@teste')->name('teste');
 
