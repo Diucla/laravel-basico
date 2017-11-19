@@ -92,4 +92,15 @@ class MarketController extends Controller
     {
         //
     }
+
+
+    /**
+    * Metodo para testes
+    * @param  \App\Market  $market
+    *
+    */
+     public function teste(Market $market)
+    {
+        return $market;
+    }
 }
