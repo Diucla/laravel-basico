@@ -1,19 +1,24 @@
 @extends('layouts.app')
 @section('main')
 
-<ul>
+<div class="col-md-4 sombra-2 p-0">
 	@foreach($markets as $market)
 
-	<li>
-		{{-- <a href=" {{ route('markets.show', $market) }} "> --}}
-		<a href=" {{ route('teste', $market) }} ">
-			{{ $market->name }}
-		</a>
-	</li>	
+	<ul class="list-group">
+
+		<li class="list-group-item">
+			<a href="{{ route('markets.show', $market) }}">
+			{{-- <a href="{{ route('teste', $market) }}" data-toggle="modal" data-target="#detailsModal"> --}}
+				{{ $market->name }}
+			</a>
+		</li>
+
+	</ul>	
+
+	@include('markets/dialog')
 
 	@endforeach
-
-</ul>
+</div>
 
 <hr>
 

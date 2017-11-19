@@ -101,6 +101,6 @@ class MarketController extends Controller
     */
      public function teste(Market $market)
     {
-        return $market;
+        return view('markets.index', ['market' => $market ]);
     }
 }
